@@ -1,0 +1,61 @@
+---
+title: "Run Analysis Codebook"
+author: "M2kanderson"
+date: "September 26, 2015"
+output: html_document
+---
+
+**Tables used:**
+
+- X_test : readings for each subject and activity for test group
+- y_test : activity for each test for the test group
+- subject_test : the subjects for each test for the test group (9 people: 2,4,9,10,12,13,18,20,24)
+- X_train : readings for each subject and activity for train group
+- y_train : activity for each test for the train group
+- subject_train : the subjects for each test for the train group (21 people: 1,3,5-8,11,14-17,19,21-23,25-30)
+- features : 561 features measured
+- activity_labels : 6 Activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, AND LAYING
+
+**Script Procedure:**
+
+- Extract only the features that use "mean" or "std" in their names
+- Create Activity Labels 
+- Bind the Subject, Activity, and measurements together
+- Label the columns
+- Merge the Test data and Train data
+- Melt data to create unique variable, activity, and subject combinations
+- cast the melted data to find the average for each variable
+- Write the final tidy data to a csv file
+
+
+**Variables:**
+
+- Subject: The number of the subject who performed the activity
+- Activity: The Activity for which measurements were taken
+- All remaining variables are from the features table. These include all mean and std variations of the following:
+
+```
+    BodyAcc-XYZ
+    tGravityAcc-XYZ
+    tBodyAccJerk-XYZ
+    tBodyGyro-XYZ
+    tBodyGyroJerk-XYZ
+    tBodyAccMag
+    tGravityAccMag
+    tBodyAccJerkMag
+    tBodyGyroMag
+    tBodyGyroJerkMag
+    fBodyAcc-XYZ
+    fBodyAccJerk-XYZ
+    fBodyGyro-XYZ
+    fBodyAccMag
+    fBodyAccJerkMag
+    fBodyGyroMag
+    fBodyGyroJerkMag
+    gravityMean
+    tBodyAccMean
+    tBodyAccJerkMean
+    tBodyGyroMean
+    tBodyGyroJerkMean
+```
+
