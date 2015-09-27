@@ -49,8 +49,8 @@ meltedData <- melt(mergedData, id= c("Subject","Activity"))
 
 averageData <- dcast(meltedData,Subject+Activity~variable, mean)
 
-#Write the final tidy data to a csv file
+#Write the final tidy data to a txt file
 
-write.csv(averageData, file = "./tidy_data.csv")
+write.table(averageData, file = "./tidy_data.txt", row.name = FALSE)
 
 

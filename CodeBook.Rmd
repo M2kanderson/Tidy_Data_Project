@@ -25,7 +25,7 @@ output: html_document
 - Merge the Test data and Train data
 - Melt data to create unique variable, activity, and subject combinations
 - cast the melted data to find the average for each variable
-- Write the final tidy data to a csv file
+- Write the final tidy data to a txt file
 
 
 **Variables:**
