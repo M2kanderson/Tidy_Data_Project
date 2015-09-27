@@ -8,4 +8,4 @@ Script to tidy up wearable computing data for Coursera Class "Getting and Cleani
 - if you don't already have it, install the reshape2 package by entering install.packages("reshape2") into the command line
 - change your working directory to the directory the script is saved in using setwd()
 - Run the script
-- tidy_data.csv will be produced in your current directory
+- tidy_data.txt will be produced in your current directory
